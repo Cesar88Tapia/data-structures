@@ -1,29 +1,30 @@
 var Stack = function() {
   var someInstance = {};
-  var newKey = 0
+  newNum = 0;
+
   //var oldKey = 1
 
   // Use an object with numeric keys to store values
   var storage = {};
 
   // Implement the methods below
-  someInstance.push = function(value) {
-    storage[newKey] = value
-    newKey++
+  someInstance.push = (value) => {
+    storage[newNum] = value
+    newNum++
   };
 
-  someInstance.pop = function() {
-    newKey--;
-    var val = storage[newKey]
-    delete storage[newKey]
-    return val
+  someInstance.pop = () => {
+    newNum--;
+    var gain = storage[newNum]
+    delete storage[newNum]
+    return gain
   };
 
-  someInstance.size = function(){
-    if (newKey > 0){
-      return newKey;
-    }else{
-      return 0;      
+  someInstance.size = () => {
+    if(newNum > 0){
+      return newNum;
+    } else {
+      return 0;
     }
   };
 

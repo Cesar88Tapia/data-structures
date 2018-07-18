@@ -1,30 +1,6 @@
 var Stack = function() {
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
   // but try not not reference your old code in writing the new style.
-var stacking = {
-  ins: 0,
-  storage: {}
-}
-_.extend(stacking, stackMethods)
-return stacking;
 };
 
-var stackMethods = {
-  push: function(data){
-    this.storage[this.ins] = data;
-    this.ins++;
-  },
-  pop: function(){
-    this.ins--;
-    var newData = this.storage[this.ins];
-    delete this.storage[this.ins];
-    return newData;
-  },
-  size: function(){
-    if(this.ins > 0){
-      return this.ins;
-    }else{
-      return 0;
-    }
-  }
-};
+var stackMethods = {};
